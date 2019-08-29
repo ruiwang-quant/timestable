@@ -1,0 +1,44 @@
+<div class="base">
+    <div class="frame">
+        <div class="table" style="background-color: #16a085">
+            <span *ngFor="let x of factors">1 x {{x}} = {{x}}</span>
+        </div>
+        <div class="table" style="background-color: #27ae60">
+            <span *ngFor="let x of factors">2 x {{x}} = {{2 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #2980b9">
+            <span *ngFor="let x of factors">3 x {{x}} = {{3 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #e74c3c">
+            <span *ngFor="let x of factors">4 x {{x}} = {{4 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #2c3e50">
+            <span *ngFor="let x of factors">5 x {{x}} = {{5 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #f39c12">
+            <span *ngFor="let x of factors">6 x {{x}} = {{6 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #d35400">
+            <span *ngFor="let x of factors">7 x {{x}} = {{7 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #c0392b">
+            <span *ngFor="let x of factors">8 x {{x}} = {{8 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #7f8c8d">
+            <span *ngFor="let x of factors">9 x {{x}} = {{9 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #1abc9c">
+            <span *ngFor="let x of factors">10 x {{x}} = {{10 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #2ecc71">
+            <span *ngFor="let x of factors">11 x {{x}} = {{11 * x}}</span>
+        </div>
+        <div class="table" style="background-color: #3498db">
+            <span *ngFor="let x of factors">12 x {{x}} = {{12 * x}}</span>
+        </div>
+    </div>
+</div>
+<div class="operation" (click)="onGoBack()">
+    <i class="fas fa-chevron-left fa-2x"></i>
+    <span>BACK</span>
+</div>

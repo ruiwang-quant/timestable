@@ -1,0 +1,20 @@
+<div class="base">
+    <div *ngFor="let x of factors" class="block" (click)="onSelect(x)">
+        <span>{{x}}</span>
+        <div>
+            <i class="fa-star" [ngClass]="getIcon(x, 1)" [style.color]='getColor(x, 1)'></i>
+            <i class="fa-star fa-lg" [ngClass]="getIcon(x, 3)" [style.color]='getColor(x, 3)'></i>
+            <i class="fa-star" [ngClass]="getIcon(x, 2)" [style.color]='getColor(x, 2)'></i>
+        </div>
+    </div>
+</div>
+<div class="popup-base" [hidden]="hide">
+    <span class="level" (click)="onGoto(8)">Easy</span>
+    <span class="level" (click)="onGoto(5)">Medium</span>
+    <span class="level" (click)="onGoto(3)">Difficult</span>
+    <i class="fas fa-chevron-left fa-2x" (click)="hide = true"></i>
+</div>
+<div class="operation" (click)="onGoBack()">
+    <i class="fas fa-chevron-left fa-2x"></i>
+    <span>BACK</span>
+</div>
