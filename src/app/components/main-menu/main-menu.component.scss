@@ -37,4 +37,115 @@
         }
     }
 
+    .profile-base {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 5rem;
+        bottom: 0;
+        
+        .profile-name {
+            position: absolute;
+            right: 5.5rem;
+            bottom: 0rem;
+            width: 20rem;
+            height: 5rem;
+
+            span {
+                float: right;
+                height: 5rem;
+                line-height: 5rem;
+                color: white;
+                font-size: 2rem;
+            }
+        }
+
+        .profile-button {
+            cursor: pointer;
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            width: 3rem;
+            height: 3rem;
+            text-align: center;
+            border-radius: 3rem;
+            border: 4px solid white;
+            background-color: #8e44ad;
+            color: white;
+
+            i {
+                height: 3rem;
+                line-height: 3rem;
+            }
+        }
+    }
+
+    .popup-base {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40rem;
+        height: 20rem;
+        margin-top: -10rem;
+        margin-left: -20rem;
+        border-radius: 1rem;
+        border: 4px solid white;
+        background-color: #9b59b6;
+
+        .input-base {
+            position: absolute;
+            left: 2rem;
+            right: 2rem;
+            top: 5rem;
+            height: 4rem;
+
+            span {
+                color: white;
+                height: 4rem;
+                line-height: 4rem;
+                font-size: 2rem;
+            }
+
+            div {
+                position: absolute;
+                left: 7rem;
+                right: 0;
+                top: 1rem;
+                height: 2rem;
+                border-radius: 0.5rem;
+                border: 2px solid white;
+                color: white;
+                font-size: 1.5rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        .ok {
+            position: absolute;
+            bottom: 2rem;
+            left: 4rem;
+            width: 10rem;
+            height: 3rem;
+            color: white;
+            border-radius: 0.5rem;
+            border: 2px solid white;
+            font-size: 2rem;
+            background-color: #2ecc71;
+        }
+
+        .cancel {
+            position: absolute;
+            bottom: 2rem;
+            right: 4rem;
+            width: 10rem;
+            height: 3rem;
+            color: white;
+            border-radius: 0.5rem;
+            border: 2px solid white;
+            font-size: 2rem;
+            background-color: #e74c3c;
+        }
+    }
+
 }

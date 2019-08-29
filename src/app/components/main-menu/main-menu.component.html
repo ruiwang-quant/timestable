@@ -12,3 +12,19 @@
         <span>Result</span>
     </div>
 </div>
+<div class="profile-base">
+    <div class="profile-button" (click)="popup = false">
+        <i class="fas fa-user fa-2x"></i>
+    </div>
+    <div class="profile-name">
+        <span>{{profile}}</span>
+    </div>
+</div>
+<div class="popup-base" [hidden]="popup">
+    <div class="input-base">
+        <div contentEditable="true" #input></div>
+        <span>NAME</span>
+    </div>
+    <button class="ok" (click)="onSelect()">OK</button>
+    <button class="cancel" (click)="popup = true">CANCEL</button>
+</div>
