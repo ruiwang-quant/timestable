@@ -1,1 +1,16 @@
-<p>result works!</p>
+<div class="base">
+    <div class="frame" [style.height]="height">
+        <div class="table">
+            <div *ngFor="let challenge of getChallenges()" class="row">
+                <span class="date">{{challenge.timestamp | date: 'dd/MM/yyyy HH:mm'}}</span>
+                <span class="level">{{getLevel(challenge.level)}}</span>
+                <span class="base">{{challenge.base}}</span>
+                <span class="result">{{challenge.correct}}/12</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="operation" (click)="onGoBack()">
+    <i class="fas fa-chevron-left fa-2x"></i>
+    <span>BACK</span>
+</div>

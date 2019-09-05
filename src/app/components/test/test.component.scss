@@ -5,6 +5,8 @@
     top: 0;
     bottom: 0;
     background-color: #34495e;
+    min-width: 50rem;
+    min-height: 40rem;
 
     .base-layer {
         position: absolute;
@@ -56,6 +58,16 @@
                 margin-right: 2rem;
             }
             
+        }
+
+        .base-answers {
+            margin-top: 2rem;
+            
+            i {
+                margin-left: 1.5rem;
+                margin-right: 1.5rem;
+            }
+
         }
     }
 

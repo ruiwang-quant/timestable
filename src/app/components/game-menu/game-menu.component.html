@@ -1,0 +1,14 @@
+<div class="base">
+    <div *ngFor="let x of factors; let i = index" class="block" [style.background-color]="getBgColor(i)" (click)="selections[i] = !selections[i]">
+        <span>{{x}}</span>
+    </div>
+</div>
+<div class="option-base">
+    <span class="level" (click)="onGoto(8)">Easy</span>
+    <span class="level" (click)="onGoto(5)">Medium</span>
+    <span class="level" (click)="onGoto(3)">Difficult</span>
+</div>
+<div class="operation" (click)="onGoBack()">
+    <i class="fas fa-chevron-left fa-2x"></i>
+    <span>BACK</span>
+</div>

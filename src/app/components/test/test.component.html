@@ -10,6 +10,9 @@
         <span class="option" (click)="onAnswer(1)">b: {{options[1]}}</span>
         <span class="option" (click)="onAnswer(2)">c: {{options[2]}}</span>
     </div>
+    <div class="base-answers">
+        <i *ngFor="let x of valueList; let i = index" class="fas fa-lg" [ngClass]="getIcon(i)" [style.color]="getColor(i)"></i>
+    </div>
 </div>
 <div class="operation" (click)="onGoBack()">
     <i class="fas fa-chevron-left fa-2x"></i>

@@ -6,12 +6,14 @@ import { TestMenuComponent } from './components/test-menu/test-menu.component';
 import { ResultComponent } from './components/result/result.component';
 import { TableMenuComponent } from './components/table-menu/table-menu.component';
 import { TestComponent } from './components/test/test.component';
+import { GameMenuComponent } from './components/game-menu/game-menu.component';
 
 const routes: Routes = [
   { path : '', component: MainMenuComponent},
   { path : 'table', component: TableMenuComponent},
   { path : 'test', component: TestMenuComponent},
-  { path : 'game', component: GameComponent},
+  { path : 'game', component: GameMenuComponent},
+  { path : 'game-detail', component: GameComponent},
   { path : 'result', component: ResultComponent},
   { path : 'test-detail', component: TestComponent}
 ];

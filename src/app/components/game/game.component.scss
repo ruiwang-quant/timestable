@@ -1,50 +1,97 @@
-.base-layer {
+:host {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+    background-color: #34495e;
+    min-width: 50rem;
+    min-height: 40rem;
 
-    .count-down {
+    .base-layer {
         position: absolute;
-        width: 20rem;
-        height: 20rem;
-        left: 50%;
-        top: 50%;
-        margin-left: -10rem;
-        margin-top: -10rem;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    
+        .count-down {
+            position: absolute;
+            width: 20rem;
+            height: 20rem;
+            left: 50%;
+            top: 50%;
+            margin-left: -10rem;
+            margin-top: -10rem;
+            text-align: center;
+    
+            span {
+                line-height: 20rem;
+                font-size: 20rem;
+                color: rgba(255, 0, 0, 0.1);
+            }
+        }
+    }
+    
+    .base {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
         text-align: center;
+        color: white;
+    
+        .question {
+            height: 20rem;
+            line-height: 20rem;
+            font-size: 10rem;
+        }
+    
+        .base-answer {
+            margin-top: 15rem;
+            
+            .option {
+                cursor: pointer;
+                font-size: 4rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+            
+        }
+
+        .base-answers {
+            margin-top: 2rem;
+            
+            i {
+                margin-left: 1.5rem;
+                margin-right: 1.5rem;
+            }
+
+        }
+    }
+
+    .operation {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 5rem;
+
+        i {
+            height: 5rem;
+            line-height: 5rem;
+            margin-left: 1rem;
+            color: white;
+        }
 
         span {
-            line-height: 20rem;
-            font-size: 20rem;
-            color: rgba(255, 0, 0, 0.1);
+            font-size: 2rem;
+            height: 5rem;
+            line-height: 5rem;
+            margin-left: 1rem;
+            color: white;
         }
     }
-}
-.base {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    text-align: center;
 
-    .question {
-        height: 20rem;
-        line-height: 20rem;
-        font-size: 10rem;
-    }
-
-    .base-answer {
-        margin-top: 15rem;
-        
-        .option {
-            cursor: pointer;
-            font-size: 4rem;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }
-        
-    }
 }

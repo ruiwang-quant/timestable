@@ -6,9 +6,10 @@ export interface Test {
 }
 
 export interface Challenge {
-    timestamp: number;
-    total: number;
+    timestamp: Date;
+    base: Array<number>;
     correct: number;
+    level: number;
 }
 
 export class Profile {

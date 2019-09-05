@@ -6,6 +6,7 @@ import { TestMenuComponent } from './test-menu/test-menu.component';
 import { TestComponent } from './test/test.component';
 import { ResultComponent } from './result/result.component';
 import { TableMenuComponent } from './table-menu/table-menu.component';
+import { GameMenuComponent } from './game-menu/game-menu.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TableMenuComponent } from './table-menu/table-menu.component';
     TestMenuComponent,
     TestComponent,
     ResultComponent,
-    TableMenuComponent
+    TableMenuComponent,
+    GameMenuComponent
   ],
   imports: [
     CommonModule

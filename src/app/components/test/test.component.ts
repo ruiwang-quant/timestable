@@ -12,6 +12,7 @@ export class TestComponent implements OnInit, OnDestroy {
   base: number;
   value: number;
   valueList: Array<number>;
+  answerList: Array<number>;
   index: number = 0;
   answer: number;
   theAnswer: string = '?';
@@ -27,6 +28,7 @@ export class TestComponent implements OnInit, OnDestroy {
     this.base = this.route.snapshot.params["factor"];
     this.total = this.route.snapshot.params["level"];
     this.totalAnswer = 0;
+    this.index = 0;
     this.initValue();
     this.startCountDown();
   }
@@ -48,12 +50,14 @@ export class TestComponent implements OnInit, OnDestroy {
       this.theAnswer = ''+this.options[index];
       if (this.answer === this.options[index]) {
         this.result = "green";
+        this.answerList[this.index - 1] = 1;
         this.totalAnswer++;
         setTimeout(() => {
           this.startCountDown();
         }, 1000);
       } else {
         this.result = "red";
+        this.answerList[this.index - 1] = -1;
         setTimeout(() => {
           this.startCountDown();
         }, 5000);
@@ -61,14 +65,34 @@ export class TestComponent implements OnInit, OnDestroy {
     }
   }
 
+  getIcon(index: number): string {
+    if (this.answerList[index] > 0) {
+      return 'fa-check';
+    } else if (this.answerList[index] < 0) {
+      return 'fa-times';
+    }
+    return 'fa-question';
+  }
+
+  getColor(index: number): string {
+    if (this.answerList[index] > 0) {
+      return 'green';
+    } else if (this.answerList[index] < 0) {
+      return 'red';
+    }
+    return 'gray';
+  }
+
   private initValue() {
     this.valueList = new Array<number>();
+    this.answerList = new Array<number>();
     while(this.valueList.length < 12) {
       let v = Math.floor(Math.random() * 13);
       while (0 === v || this.valueList.includes(v)) {
         v = Math.floor(Math.random() * 13);
       }
       this.valueList.push(v);
+      this.answerList.push(0);
     }
   }
 

@@ -60,7 +60,7 @@ export class TestMenuComponent implements OnInit {
   }
 
   getIcon(factor: number, level: number): string {
-    if (this.profile) {
+    if (this.profile && this.profile.tests) {
       if (1 === level) {
         return this.profile.tests[factor - 1].level1?'fas':'far';
       } else if (2 === level) {
@@ -76,7 +76,7 @@ export class TestMenuComponent implements OnInit {
   }
 
   getColor(factor: number, level: number): string {
-    if (this.profile) {
+    if (this.profile && this.profile.tests) {
       if (1 === level) {
         return this.profile.tests[factor - 1].level1?'#f1c40f':'#ecf0f1';
       } else if (2 === level) {
