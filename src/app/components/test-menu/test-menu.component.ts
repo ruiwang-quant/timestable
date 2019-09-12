@@ -41,6 +41,21 @@ export class TestMenuComponent implements OnInit {
         ]
       } as Profile;
       localStorage.setItem(profileKey, JSON.stringify(this.profile));
+    } else if (!this.profile.tests) {
+      this.profile.tests = [
+        {factor: 1, level1: false, level2: false, level3: false},
+        {factor: 2, level1: false, level2: false, level3: false},
+        {factor: 3, level1: false, level2: false, level3: false},
+        {factor: 4, level1: false, level2: false, level3: false},
+        {factor: 5, level1: false, level2: false, level3: false},
+        {factor: 6, level1: false, level2: false, level3: false},
+        {factor: 7, level1: false, level2: false, level3: false},
+        {factor: 8, level1: false, level2: false, level3: false},
+        {factor: 9, level1: false, level2: false, level3: false},
+        {factor: 10, level1: false, level2: false, level3: false},
+        {factor: 11, level1: false, level2: false, level3: false},
+        {factor: 12, level1: false, level2: false, level3: false},
+      ];
     }
     const factor:number = +this.route.snapshot.params["factor"];
     const level:number = +this.route.snapshot.params["level"];
